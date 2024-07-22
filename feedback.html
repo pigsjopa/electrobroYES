@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+</head>
+<style>
+  body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f5f5f5;
+}
+
+h1 {
+text-align: center;
+margin-top: 50px;
+color: #333;
+}
+
+form {
+width: 100%;
+max-width: 600px;
+margin: 50px auto;
+background-color: #fff;
+padding: 30px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+}
+
+label {
+display: block;
+margin-bottom: 5px;
+font-size: 16px;
+color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+color: #333;
+resize: vertical;
+}
+
+input[type="submit"] {
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+background-color: #555;
+}
+
+</style>
+<body>
+    <h1>Обратная связь</h1>
+    <form action="submit.php" method="post">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Электронная почта:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="mas">Сообщение:</label><br>
+        <textarea id="mas" name="mas" required></textarea><br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+
+<div id="messages"></div>
+
+</html>
